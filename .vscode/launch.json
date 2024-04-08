@@ -6,7 +6,11 @@
       "request": "launch",
       "mode": "auto",
       "program": "cmd/web",
-      "args": ["TIER=development"]
+      "args": ["TIER=development"],
+      "env": {
+        "STRIPE_KEY": "pk_test_51P2w91SINnhHz2R6b2pbZsbqledSJyZPqS8TOKuw5ikq9bMTMaUJyvFPSR4dSWYdOB6bzFpt77ErH6a7HCOMoUB900WVRvYiLq",
+        "STRIPE_SECRET": "sk_test_51P2w91SINnhHz2R6p9EXIYTKQNYmNUBYupr2UBJiWs8n2GdvgqFpyYU6z5yU03qujpV9iLdRg4yYV7TbqHS4WgtT00KXFnGK5I"
+      }
     }
   ]
 }
