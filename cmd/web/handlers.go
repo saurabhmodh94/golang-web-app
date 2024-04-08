@@ -8,7 +8,11 @@ import (
 )
 
 func (app *application) VirtualTerminal(w http.ResponseWriter, r *http.Request) {
-	if err := app.renderTemplate(w, r, "terminal", nil); err != nil {
+	data := map[string]interface{}{"cardholder": "John Doe"}
+
+	if err := app.renderTemplate(w, r, "terminal", &templateData{
+		Data: data,
+	}); err != nil {
 		app.errorLog.Println(err)
 	}
 }
