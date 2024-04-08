@@ -1,0 +1,125 @@
+meta {
+  name: POST Stripe Payment Intent
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:4000/api/payment-intent
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "amount": "1000",
+    "currency": "cad"
+  }
+}
+
+docs {
+  {
+    "amount": 1000,
+    "amount_capturable": 0,
+    "amount_details": {
+      "tip": {
+        "amount": 0
+      }
+    },
+    "amount_received": 0,
+    "application": null,
+    "application_fee_amount": 0,
+    "automatic_payment_methods": null,
+    "canceled_at": 0,
+    "cancellation_reason": "",
+    "capture_method": "automatic",
+    "charges": {
+      "has_more": false,
+      "url": "/v1/charges?payment_intent=pi_3P36OySINnhHz2R61zANGr1g",
+      "total_count": 0,
+      "data": []
+    },
+    "client_secret": "pi_3P36OySINnhHz2R61zANGr1g_secret_uFvD4hdDLjcxplmcR4ono9Bwk",
+    "confirmation_method": "automatic",
+    "created": 1712537376,
+    "currency": "cad",
+    "customer": null,
+    "description": "",
+    "id": "pi_3P36OySINnhHz2R61zANGr1g",
+    "invoice": null,
+    "last_payment_error": null,
+    "livemode": false,
+    "metadata": {
+      "hello": "world"
+    },
+    "next_action": null,
+    "object": "payment_intent",
+    "on_behalf_of": null,
+    "payment_method": null,
+    "payment_method_options": {
+      "acss_debit": null,
+      "affirm": null,
+      "afterpay_clearpay": null,
+      "alipay": null,
+      "au_becs_debit": null,
+      "bacs_debit": null,
+      "bancontact": null,
+      "blik": null,
+      "boleto": null,
+      "card": {
+        "capture_method": "",
+        "installments": null,
+        "mandate_options": null,
+        "network": "",
+        "request_three_d_secure": "automatic",
+        "setup_future_usage": "",
+        "statement_descriptor_suffix_kana": "",
+        "statement_descriptor_suffix_kanji": ""
+      },
+      "card_present": null,
+      "customer_balance": null,
+      "eps": null,
+      "fpx": null,
+      "giropay": null,
+      "grabpay": null,
+      "ideal": null,
+      "interac_present": null,
+      "klarna": null,
+      "konbini": null,
+      "link": null,
+      "oxxo": null,
+      "p24": null,
+      "paynow": null,
+      "promptpay": null,
+      "sepa_debit": null,
+      "sofort": null,
+      "us_bank_account": null,
+      "wechat_pay": null
+    },
+    "payment_method_types": [
+      "card"
+    ],
+    "processing": null,
+    "receipt_email": "",
+    "review": null,
+    "setup_future_usage": "",
+    "shipping": {
+      "address": null,
+      "carrier": "",
+      "name": "",
+      "phone": "",
+      "tracking_number": ""
+    },
+    "source": null,
+    "statement_descriptor": "",
+    "statement_descriptor_suffix": "",
+    "status": "requires_payment_method",
+    "transfer_data": null,
+    "transfer_group": ""
+  }
+}
